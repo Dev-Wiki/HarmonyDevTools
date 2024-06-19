@@ -113,7 +113,7 @@ public partial class MainWindow : Window
         ResultTb.ScrollToEnd();
     }
 
-    private async void GetImage_OnClick(object sender, RoutedEventArgs e)
+    private void GetImage_OnClick(object sender, RoutedEventArgs e)
     {
         ExportFile("/storage/media/100/local/files/Photo");
     }
