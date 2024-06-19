@@ -4,9 +4,72 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HarmonyDevTools"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:control="clr-namespace:HarmonyDevTools.control"
+        mc:Ignorable="d" ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Title="HDC Tools" Height="600" Width="740" Margin="10">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="ListBtn" Grid.Row="0" Grid.Column="0" Width="100" Height="36" Content="List Targets" Click="ListBtn_OnClick" />
+        
+        <TextBox x:Name="TargetTb" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="10,0,10,0" VerticalContentAlignment="Center"
+            VerticalAlignment="Center" Height="36" control:TextBoxHelper.Placeholder="请输入connect key"/>
+        
+        <Button x:Name="ConnectBtn" Grid.Row="0" Grid.Column="3" Width="100" Height="36" Content="Connect Device" Click="ConnectBtn_OnClick" />
+        
+        <Button x:Name="KillBtn" Grid.Row="0" Grid.Column="4" Width="100" Height="36" Content="Kill Restart" Click="KillBtn_OnClick" />
+        
+        <Button x:Name="CheckServerBtn" Grid.Row="0" Grid.Column="5" Width="100" Height="36" Content="Check Server" Click="CheckServerBtn_OnClick" />
 
+        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" BorderBrush="Red" BorderThickness="1" Margin="5,0,5,0">
+            <StackPanel Orientation="Horizontal" Margin="5,0,5,0">
+                <Button x:Name="InstallBtn" Width="100" Height="36" Content="Install"
+                    Click="InstallOnClick" VerticalAlignment="Center" />
+        
+                <CheckBox x:Name="ReplaceCb" Content="替换安装" IsChecked="False" VerticalAlignment="Center"
+                    Margin="10,0,0,0"/>
+        
+                <CheckBox x:Name="DowngradeCb" Content="允许降级" IsChecked="False" VerticalAlignment="Center"
+                    Margin="10,0,0,0"/>
+                
+                <CheckBox x:Name="DynamicCb" Content="动态授权" IsChecked="False" VerticalAlignment="Center"
+                    Margin="10,0,0,0"/>
+            </StackPanel>
+        </Border>
+        
+        <Border Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3" Margin="5,0,5,0" BorderBrush="Red" BorderThickness="1">
+            <StackPanel Orientation="Horizontal" Margin="5,0,5,0">
+                <TextBox x:Name="PackageNameTb" control:TextBoxHelper.Placeholder="输入包名" VerticalAlignment="Center" VerticalContentAlignment="Center"
+                    Width="228" Height="36"/>
+                
+                <Button x:Name="UninstallBtn" Width="100" Height="36" Content="Uninstall" Margin="10,0,0,0"
+                    Click="UninstallBtn_OnClick" VerticalAlignment="Center" />
+            </StackPanel>
+        </Border>
+        
+        <Button x:Name="GetImage" Grid.Row="3" Grid.Column="1" Width="100" Height="36" Content="Get Image" Click="GetImage_OnClick" />
+
+        <TextBox x:Name="CommandTb" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" Margin="10,0,10,0"
+            Height="32" VerticalContentAlignment="Center" control:TextBoxHelper.Placeholder="输入命令不需要以 hdc 开头"/>
+        
+        <Button x:Name="CommandBtn" Content="Execute" Grid.Row="2" Grid.Column="5" Width="100" Height="36" VerticalAlignment="Center"
+            Click="CommandBtn_OnClick" HorizontalAlignment="Center"/>
+        
+        <TextBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="6"  x:Name="ResultTb" Margin="10" TextWrapping="Wrap" IsReadOnly="True"
+            VerticalScrollBarVisibility="Auto"/>
     </Grid>
 </Window>

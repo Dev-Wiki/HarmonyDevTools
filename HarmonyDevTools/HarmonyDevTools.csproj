@@ -7,4 +7,15 @@
         <UseWPF>true</UseWPF>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Reference Include="log4net">
+        <HintPath>..\libs\log4net.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+
+    <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+        <Exec Command="xcopy &quot;$(ProjectDir)..\toolchains&quot; &quot;$(TargetDir)toolchains&quot; /E /I /Y" />
+    </Target>
+
 </Project>
