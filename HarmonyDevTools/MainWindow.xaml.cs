@@ -127,4 +127,10 @@ public partial class MainWindow : Window
         string result = await Task.Run(() => HdcUtil.ExportFile(path));
         AppendHintAndScrollToEnd($"export result: {result} \n");
     }
+
+    private void GetUDID_OnClick(object sender, RoutedEventArgs e)
+    {
+        CommandTb.Text = "shell bm get --udid";
+        GetCommandAndExecute();
+    }
 }

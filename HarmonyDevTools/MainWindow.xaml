@@ -61,6 +61,8 @@
         </Border>
         
         <Button x:Name="GetPhoto" Grid.Row="3" Grid.Column="0" Width="100" Height="36" Content="导出照片" Click="GetPhoto_OnClick" />
+        
+        <Button x:Name="GetUDID" Grid.Row="3" Grid.Column="1" Width="100" Height="36" Content="UDID" Click="GetUDID_OnClick" />
 
         <TextBox x:Name="CommandTb" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" Margin="10,0,10,0"
             Height="32" VerticalContentAlignment="Center" control:TextBoxHelper.Placeholder="输入命令不需要以 hdc 开头"/>
