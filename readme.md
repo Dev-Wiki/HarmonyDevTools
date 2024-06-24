@@ -14,7 +14,7 @@ hdc功能支持:
 - 获取手机的UDID
 - 其他命令的执行（手动输入执行）
 
-下载地址: [Release](/releases)页面下载最新版本。
+下载地址: [Release](./releases)页面下载最新版本。
 
 ![主界面](image/主界面.png)
 
