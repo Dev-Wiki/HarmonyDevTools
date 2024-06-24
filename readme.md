@@ -25,7 +25,7 @@ hdc功能支持:
 
 ## 2. 使用方式
 
-下载最新的 Release包, 解压如下目录, 双击 `HarmonyDevTools.exe` 运行。
+下载最新的 [Release](../../release)包, 解压如下目录, 双击 `HarmonyDevTools.exe` 运行。
 
 ![解压](image/解压后文件.png)
 
