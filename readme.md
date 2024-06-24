@@ -1,4 +1,9 @@
 
+![](https://img.shields.io/badge/状态-稳定-red.svg)
+![](https://img.shields.io/badge/启动时间-2024/06/20-green.svg)
+![](https://img.shields.io/badge/优先级-NORMAL-blue.svg)
+![GitHub Release](https://img.shields.io/github/v/release/dev-wiki/HarmonyDevTools?color=yellow&label=版本)
+
 本项目为HarmonyOS/OpenHarmony的 toolchains 工具提供UI操作, 方便使用.
 
 ## 1. 版本说明
@@ -14,7 +19,7 @@ hdc功能支持:
 - 获取手机的UDID
 - 其他命令的执行（手动输入执行）
 
-下载地址: [Release](./releases)页面下载最新版本。
+下载地址: **Release** 页面下载最新版本。
 
 ![主界面](image/主界面.png)
 
