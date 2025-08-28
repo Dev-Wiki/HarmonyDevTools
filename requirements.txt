@@ -1,0 +1,14 @@
+# Python Tkinter项目依赖
+# 注意：tkinter是Python标准库的一部分，通常不需要额外安装
+# 但为了确保项目完整性，这里列出所有可能的依赖
+
+# 如果需要额外的GUI增强功能，可以添加以下依赖：
+# tkinter-tooltip==2.0.0  # 工具提示功能
+# tkinterdnd2==0.3.0     # 拖拽功能
+
+# 日志相关（可选）
+# colorlog==6.7.0        # 彩色日志输出
+
+# 打包相关（用于生成exe文件）
+# pyinstaller==5.13.0    # 打包为exe文件
+# auto-py-to-exe==2.32.0 # GUI打包工具
